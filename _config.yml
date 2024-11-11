@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Your Name / Site Title"
+title                    : "Home"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
@@ -21,14 +21,14 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  avatar           : "IMG_1033.jpg"
+  name             : "Tejas Shimpi"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "Building systems for AI"
+  location         : "Atlanta, GA"
+  employer         : "Georgia Tech"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "tej.shimpi@gmail.com" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
@@ -82,6 +82,14 @@ publication_category:
     title: 'Journal Articles'    
   conferences:
     title: 'Conference Papers'
+
+professional_experience_category:
+  internships:
+    title: 'Internships'
+  fulltime:
+    title: 'Full-Time Positions'
+  teaching:
+    title: 'Teaching'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -224,6 +232,9 @@ collections:
   talks:
     output: true
     permalink: /:collection/:path/
+  professional_experience:
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -250,6 +261,15 @@ defaults:
   - scope:
       path: ""
       type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _professional_experience
+  - scope:
+      path: ""
+      type: professional_experience
     values:
       layout: single
       author_profile: true

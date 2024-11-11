@@ -39,13 +39,51 @@
   }
 }
 
+.company-logo {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Ensure it's a square for circular shape */
+  border-radius: 50%; /* Makes the image circular */
+  margin-right: 0.5em; /* Adds space between the logo and the title */
+}
+
+
 .archive__item-title {
+  margin-top: 1em; /* Set this to 0 or a smaller value to reduce the space above */
+}
+
+.archive__item-title a {
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
-
+  color: black; /* Default color */
+  text-decoration: none; /* Removes underline */
+  font-weight: bold; /* Bold text */
   a + a {
     opacity: 0.5;
   }
+}
+
+.archive__item-title a:hover {
+  color: darkgrey; /* Changes color on hover */
+  text-decoration: none; /* Removes underline */
+}
+
+.archive__item p {
+  margin-top: 0.3em;
+
+  p + p {
+    margin-top: -0.5em;
+  }
+}
+
+.archive__item.arrow-icon {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 8px solid black; /* Arrow color */
+  margin-left: 0.3em; /* Adds spacing between the title and arrow */
+  vertical-align: bottom;
 }
 
 /* remove border*/
@@ -77,10 +115,6 @@
 .archive__item:hover {
   .archive__item-teaser {
     box-shadow: 0 0 10px rgba(#000, 0.25);
-  }
-
-  .archive__item-title {
-    text-decoration: underline;
   }
 }
 

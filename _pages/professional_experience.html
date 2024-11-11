@@ -1,0 +1,32 @@
+---
+layout: archive
+title: "Professional Experience"
+permalink: /professional_experience/
+author_profile: true
+read_more: enabled
+---
+
+{% include base_path %}
+<!-- {% for post in site.professional_experience reversed %}
+  {% include pe-single.html %}
+{% endfor %} -->
+
+{% if site.professional_experience_category %}
+  {% for category in site.professional_experience_category  %}
+    {% assign title_shown = false %}
+    {% for post in site.professional_experience reversed %}
+      {% if post.category != category[0] %}
+        {% continue %}
+      {% endif %}
+      {% unless title_shown %}
+        <h2 style="margin-top: 1.5em;">{{ category[1].title }}</h2><hr />
+        {% assign title_shown = true %}
+      {% endunless %}
+      {% include pe-single.html %}
+    {% endfor %}
+  {% endfor %}
+{% else %}
+  {% for post in site.professional_experience reversed %}
+    {% include pe-single.html %}
+  {% endfor %}
+{% endif %}
