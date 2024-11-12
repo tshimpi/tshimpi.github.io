@@ -84,12 +84,18 @@ publication_category:
     title: 'Conference Papers'
 
 professional_experience_category:
-  internships:
-    title: 'Internships'
   fulltime:
     title: 'Full-Time Positions'
+  internships:
+    title: 'Internships'
   teaching:
     title: 'Teaching'
+
+projects_category:
+  ongoing:
+    title: 'Ongoing Projects'
+  past:
+    title: 'Past Projects'
 
 # Site Settings
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -235,6 +241,9 @@ collections:
   professional_experience:
     output: true
     permalink: /:collection/:path/
+  projects:
+    output: true
+    permalink: /:collection/:path/
 
 
 # These settings control how pages and collections are included in the site
@@ -270,6 +279,15 @@ defaults:
   - scope:
       path: ""
       type: professional_experience
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _projects
+  - scope:
+      path: ""
+      type: projects
     values:
       layout: single
       author_profile: true
