@@ -1,14 +1,12 @@
 ---
-title: "Paper Title Number 2"
+title: "Structuring an Unordered Text Document"
 collection: publications
-category: manuscripts
+category: preprints
 permalink: /publication/2010-10-01-paper-title-number-2
-excerpt: 'This paper is about the number 2. The number 3 is left for future work.'
-date: 2010-10-01
-venue: 'Journal 1'
-slidesurl: 'http://academicpages.github.io/files/slides2.pdf'
-paperurl: 'http://academicpages.github.io/files/paper2.pdf'
-citation: 'Your Name, You. (2010). &quot;Paper Title Number 2.&quot; <i>Journal 1</i>. 1(2).'
+excerpt: 'Unsupervised semantic reordering of an unordered document into sections based on relevance'
+date: 2019-10-01
+venue: 'arXiv Preprint'
+paperurl: 'https://arxiv.org/pdf/1901.10133'
 ---
 
-The contents above will be part of a list of publications, if the user clicks the link for the publication than the contents of section will be rendered as a full page, allowing you to provide more information about the paper for the reader. When publications are displayed as a single page, the contents of the above "citation" field will automatically be included below this section in a smaller font.
+Proposed a method to structure unordered text documents by segmenting them into coherent sections based on keywords. Using the TextRank algorithm to extract keywords and Google’s Universal Sentence Encoder (USE) to compute sentence embeddings, grouped sentences into clusters centered around relevant keywords. Demonstrated that this clustering approach, which considers both sentence-keyword and inter-sentence similarities, significantly improves document coherence. Introduced two metrics, Sim1 and Sim2, to evaluate clustering performance, showing substantial gains over the baseline model in organizing unordered text documents into structured formats.
